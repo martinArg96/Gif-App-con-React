@@ -9,6 +9,8 @@ const GifExpertApp = () => {
 
     const onAddCategory =( newCategory) => {
         console.log(newCategory)
+
+        if(categories.includes(newCategory)) return
         setCategories([...categories,newCategory])
         //setCategories(categories.push('Homero simpson')) NO USAR PUSH PARA ESTO EN REACT
         // setCategories([...categories,'valorant'])
@@ -25,6 +27,7 @@ const GifExpertApp = () => {
             {/* input */}
             <AddCategory 
                 onNewCategory={ (evento) => onAddCategory(evento)} 
+        
             />
 
             <button onClick={onAddCategory} >Agregar</button>
