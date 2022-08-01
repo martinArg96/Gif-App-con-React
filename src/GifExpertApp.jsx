@@ -1,7 +1,7 @@
 // import React from 'react'////despues de la version 17 de react no es necesario
 import { useState } from "react"
 import { AddCategory } from "./components/AddCategory"
-
+import {GifGrid} from './components/GifGrid'
 
 const GifExpertApp = () => {
     
@@ -27,16 +27,18 @@ const GifExpertApp = () => {
             {/* input */}
             <AddCategory 
                 onNewCategory={ (evento) => onAddCategory(evento)} 
-        
             />
 
-            <button onClick={onAddCategory} >Agregar</button>
-            <ol>
-                { categories.map(category =>{
-                    return <li key={ category }  >  {category}  </li>
-                }) }
-                {/* <li></li> */}
-            </ol>
+
+            
+            { categories.map( (category) =>
+                <GifGrid 
+                    key= {category}
+                    category = {category}
+                />
+            ) }
+
+            
         </>
     )
 }
