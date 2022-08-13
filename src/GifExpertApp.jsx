@@ -5,7 +5,7 @@ import {GifGrid} from './components/GifGrid'
 
 const GifExpertApp = () => {
     
-    const [categories, setCategories] = useState(['Maradona'])
+    const [categories, setCategories] = useState([])
 
     const onAddCategory =( newCategory) => {
         console.log(newCategory)
@@ -22,7 +22,7 @@ const GifExpertApp = () => {
     return (
         <>
             {/* titulo */}
-            <h1>GifMartinApp</h1>
+            <h1>App de gifs de martincho</h1>
 
             {/* input */}
             <AddCategory 
@@ -30,13 +30,15 @@ const GifExpertApp = () => {
             />
 
 
-            
+            <div className="container">
+
             { categories.map( (category) =>
                 <GifGrid 
-                    key= {category}
-                    category = {category}
+                key= {category}
+                category = {category}
                 />
-            ) }
+                ) }
+                </div>
 
             
         </>
