@@ -1,7 +1,7 @@
 // import React from 'react'////despues de la version 17 de react no es necesario
 import { useState } from "react"
-import { AddCategory } from "./components/AddCategory"
-import {GifGrid} from './components/GifGrid'
+import { AddCategory, GifGrid } from "./components"
+
 
 const GifExpertApp = () => {
     
@@ -22,7 +22,7 @@ const GifExpertApp = () => {
     return (
         <>
             {/* titulo */}
-            <h1>App de gifs de martincho</h1>
+            <h1>App de gifs de martin</h1>
 
             {/* input */}
             <AddCategory 
